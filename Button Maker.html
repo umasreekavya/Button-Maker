@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .button-maker-bg-container {
+            padding: 20px;
+        }
+
+        .button-maker-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button-maker-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-md-7 {
+            width: 70%;
+            padding-right: 20px;
+        }
+
+        .col-md-5 {
+            width: 30%;
+        }
+
+        .input-label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .user-input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .mt-4 {
+            margin-top: 20px;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .custom-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-maker-bg-container">
+        <h1 class="button-maker-heading">Button Maker</h1>
+        <div class="button-maker-container">
+            <div class="container">
+                <div class="col-12 col-md-7">
+                    <p class="input-label">BACKGROUND COLOR</p>
+                    <input id="bgColorInput" class="user-input" type="text" />
+                    <p class="input-label">FONT COLOR</p>
+                    <input id="fontColorInput" class="user-input" type="text" />
+                    <p class="input-label">FONT SIZE (in px)</p>
+                    <input id="fontSizeInput" class="user-input" type="text" />
+                    <p class="input-label">FONT WEIGHT</p>
+                    <input id="fontWeightInput" class="user-input" type="text" />
+                    <p class="input-label">PADDING (in px)</p>
+                    <input id="paddingInput" class="user-input" type="text" />
+                    <p class="input-label">BORDER RADIUS (in px)</p>
+                    <input id="borderRadiusInput" class="user-input" type="text" />
+                    <div class="text-right mt-4">
+                        <button id="applyButton" class="btn" onclick="changebutton()">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 mt-4 text-center">
+                    <button id="customButton" class="custom-button">Custom Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let bgcolorinput = document.getElementById("bgColorInput");
+let fontcolorinputelement = document.getElementById("fontColorInput");
+let fontSizeInputelement = document.getElementById("fontSizeInput");
+let fontWeightInputelement = document.getElementById("fontWeightInput");
+let paddingInputelement = document.getElementById("paddingInput");
+let borderRadiusInputelement = document.getElementById("borderRadiusInput");
+
+let customButtonelement = document.getElementById("customButton");
+
+function changebutton() {
+    let bgcolorinputvalue = bgcolorinput.value;
+    let fontcolorinputelementvalue = fontcolorinputelement.value;
+    let fontSizeInputelementvalue = fontSizeInputelement.value;
+    let fontWeightInputelementvalue = fontWeightInputelement.value;
+    let paddingInputelementvalue = paddingInputelement.value;
+    let borderRadiusInputelementvalue = borderRadiusInputelement.value;
+
+
+    customButtonelement.style.backgroundColor = bgcolorinputvalue;
+    customButtonelement.style.color = fontcolorinputelementvalue;
+    customButtonelement.style.fontSize = fontSizeInputelementvalue;
+    customButtonelement.style.fontWeight = fontWeightInputelementvalue;
+    customButtonelement.style.padding = paddingInputelementvalue;
+    customButtonelement.style.borderRadius = borderRadiusInputelementvalue;
+}
+    </script>
+</body>
+
+</html>
